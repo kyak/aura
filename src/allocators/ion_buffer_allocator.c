@@ -3,7 +3,6 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
-
 static void *ion_buffer_alloc_create(struct aura_node *node)
 {
 	struct aura_ion_allocator_data *data = calloc(sizeof(*data), 1);
@@ -37,7 +36,7 @@ static struct aura_buffer *ion_buffer_request(struct aura_node *node, void *data
 {
 	int ret;
 	int map_fd = 0;
-	ion_user_handle_t hndl = 0;
+	ion_handle_t hndl = -1;
 	struct aura_ion_allocator_data *pv = data;
 
 	struct aura_ion_buffer_descriptor *dsc = malloc(sizeof(*dsc));

@@ -7,7 +7,7 @@ struct aura_ion_buffer_descriptor {
 	int			map_fd;
 	int			share_fd;
 	int			size;
-	ion_user_handle_t	hndl;
+	ion_handle_t	hndl;
 	struct aura_buffer	buf;
 };
 
